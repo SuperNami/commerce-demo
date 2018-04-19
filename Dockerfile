@@ -17,12 +17,12 @@ RUN apt-get update && \
     apt-get install -y nodejs
 
 # install drupal dependencies with composer
-RUN cd /var/www/html && \
-	composer install --no-dev && \
-	cd web && \
+RUN cd /var/www/html/web && \
 	chown -R www-data:www-data sites modules themes && \
-	cd themes/custom/lakunu_v01 && \
-	npm install
+	composer install --no-interaction --no-dev && \
+	cd themes/custom/commerce_2_demo && \
+	npm install && \
+	gulp sass
 
 WORKDIR /var/www/html
 ENTRYPOINT ["entrypoint.sh"]
