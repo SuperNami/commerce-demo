@@ -74,7 +74,7 @@ build:
   script:
     - chmod +x entrypoint.sh
     - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
-    - docker build -t registry.gitlab.com/lakunulk/lakunulk:$VERSION --build-arg PATH=$PATH -f Dockerfile .
-    - docker tag registry.gitlab.com/lakunulk/lakunulk:$VERSION registry.gitlab.com/lakunulk/lakunulk:latest
-    - docker push registry.gitlab.com/lakunulk/lakunulk:$VERSION
-    - docker push registry.gitlab.com/lakunulk/lakunulk:latest
+    - docker build -t registry.gitlab.com/supernami/commerce-demo-ci-mirror:$VERSION --build-arg PATH=$PATH -f Dockerfile .
+    - docker tag registry.gitlab.com/supernami/commerce-demo-ci-mirror:$VERSION registry.gitlab.com/supernami/commerce-demo-ci-mirror:latest
+    - docker push registry.gitlab.com/supernami/commerce-demo-ci-mirror:$VERSION
+    - docker push registry.gitlab.com/supernami/commerce-demo-ci-mirror:latest
