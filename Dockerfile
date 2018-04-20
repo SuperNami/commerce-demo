@@ -12,7 +12,7 @@ COPY . /var/www/html
 
 # Install node v6 with npm
 RUN apt-get update && \
-    apt-get install -y gnupg1 gnupg2 && \
+    apt-get install -y gnupg && \
     curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
     apt-get install -y nodejs
 
