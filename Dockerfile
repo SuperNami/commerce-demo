@@ -1,5 +1,5 @@
 # from https://www.drupal.org/requirements/php#drupalversions
-FROM registry.gitlab.com/dimages/php-72-drupal:latest
+FROM registry.gitlab.com/dimages/php-71-drupal:latest
 
 ENV PATH "$PATH:/var/www/html/vendor/bin"
 
