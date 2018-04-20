@@ -1,8 +1,8 @@
 # custom docker image based off the stock php one, includes Drupal dependencies and testing dependencies
 # see details here: https://github.com/smmccabe/docker/blob/master/Dockerfile
 image: smmccabe/drupal:latest
-#image: smmccabe/drupal:php7
-#image: smmccabe/drupal:php5.6
+services:
+- docker:dind
 
 variables:
   MYSQL_DATABASE: drupal
@@ -58,7 +58,7 @@ custom_tests_d8:
 
 build:
   stage: build
-
+  image: docker:latest
   # NOTE: Master is also pushed to public accessible GitHub repo: https://github.com/AcroMedia/commerce-demo
   only:
     - master
