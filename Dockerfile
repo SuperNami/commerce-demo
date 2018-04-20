@@ -23,6 +23,7 @@ RUN cd /var/www/html && \
 		chown -R www-data:www-data sites modules themes && \
 		cd themes/custom/commerce_2_demo && \
 		npm install && \
+		npm install --global gulp-cli && \
 		gulp sass
 
 WORKDIR /var/www/html
