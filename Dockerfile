@@ -1,7 +1,7 @@
 # from https://www.drupal.org/requirements/php#drupalversions
 FROM registry.gitlab.com/dimages/php-71-drupal:latest
 
-ENV PATH "$PATH:/var/www/html/vendor/bin"
+ENV PATH "$PATH:/var/www/html/vendor/drush/drush"
 
 # copy entrypoint
 COPY entrypoint.sh /usr/local/bin
